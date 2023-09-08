@@ -14,5 +14,11 @@ form.addEventListener('submit', (e) =>{
   input.value = '';
 });
 socket.on('SEND_MESSAGE', (data) => {
-  message.innerHTML += `<li><span>${data.name}</span>${data.message}</li>`
+  if(data.name == userName){
+    message.innerHTML += `<div class="imMes"><div></div><div class="textMes">${data.message}</div></div>`;
+  }
+  else{
+    message.innerHTML += `<div class="youMes">  <div class="textMes2">${data.message}</div><div class="nameMes">${data.name}</div><div></div></div>`
+  }
+  
 });

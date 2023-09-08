@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+::-webkit-scrollbar{
+  width: 0px;
+  height: 0px;
+}
 *{
   margin: 0px;
   padding: 0px;
-  font-family: sans-serif;
-  box-sizing: border-box;
+  font-family: Sans-Serif;
+  transition: all 300ms ease;
+  
 }
 .message{
   list-style: none;
@@ -41,20 +48,148 @@
 .name{
   color: #fff;
 }
-.input{
-  width: 80%;
-  height: 40px;
-  font-size: 23px;
+
+
+
+
+
+
+body{
+  background:#181A20;
+  width:100%;
+  height: 100vh;
+  
 }
+
+.boxView{
+  box-sizing: border-box;
+  position:fixed;
+  width:100%;
+  height: 100%;
+  border-top-left-radius:60px;
+  border-top-right-radius:60px;
+  border-top:60px solid transparent;
+  border-bottom:70px solid transparent;
+  bottom: 0px;
+
+  
+}
+.boxChat{
+  width:100%;
+  height: 100%;
+  overflow: auto;
+}
+.chat{
+  margin-top:0px;
+  width:100%;
+  height: auto;
+}
+.youMes{
+  display: inline-block;
+  box-sizing: border-box;
+  max-width:70%;
+  height: auto;
+  padding: 5px;
+  margin-left:2%;
+position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  
+}
+.textMes2{
+  display: inline-block;
+  box-sizing: border-box;
+  height: auto;
+  max-width: 100%;
+
+  padding: 10px 10px 15px 10px;
+  border-radius: 20px 20px 20px 3px;
+  color:#fff;
+  background:#262A34;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+.imMes{
+  box-sizing: border-box;
+  width:70%;
+  height: auto;
+  padding: 5px;
+  margin-left:28%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.nameMes{
+  bottom:5px;
+  left:10px;
+  font-size: 10px;
+  color:#fff;
+  font-weight: 200;
+  position: absolute;
+
+}
+.textMes{
+  max-width: 100%;
+  padding: 12px;
+  border-radius: 20px 20px 3px 20px;
+  color:#fff;
+  background:#246BFD;
+  display: inline-block;
+}
+
+
+
+
+
+
+
+.input{
+  transition: all 600ms;
+  width: 60%;
+  height:30px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: 0px;
+}
+#input::placeholder{
+  color: #fff;
+
+}
+
 .btn{
-  padding: 10px 20px;
-  background-color: #fff;
-  border: none;
   cursor: pointer;
+  background-color: #246BFD;
+  color:#fff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-left: 10px;
+  border: 2px solid #246BFD;
+  box-sizing: border-box;
 }
 .btn:hover{
-  padding: 10px 20px;
-  background-color: #d13d3d;
-  border: none;
+  box-sizing: border-box;
   cursor: pointer;
+  background-color: transparent;
+  color:#246BFD;
+  border: 2px solid #246BFD;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+.sendChat{
+  position: fixed;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 0px;
+  width: 100%;
+  height:70px;
+  background-color: #262A34;
+  border-radius: 25px 25px 0px 0px;
 }
